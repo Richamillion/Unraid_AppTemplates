@@ -4,23 +4,10 @@
   <Repository>ghcr.io/teifun2/cs-unifi-bouncer:latest</Repository>
   <Registry>https://github.com/teifun2/cs-unifi-bouncer</Registry>
   <Network>Bridge</Network>
-  </MyIP>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support/>
   <Project>https://github.com/teifun2/cs-unifi-bouncer<Project/>
-  <Overview/>
-  <Category/>
-  <WebUI/>
-  <TemplateURL/>
   <Icon>https://github.com/teifun2/cs-unifi-bouncer/raw/main/docs/assets/crowdsec_unifi_logo.png</Icon>
-  <ExtraParams/>
-  <PostArgs/>
-  <CPUset/>
-  </DateInstalled>
-  <DonateText/>
-  <DonateLink/>
-  <Requires/>
   <Config Name="CROWDSEC_BOUNCER_API_KEY" Target="CROWDSEC_BOUNCER_API_KEY" Default="" Mode="" Description="Run " Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="CROWDSEC_URL" Target="CROWDSEC_URL" Default="" Mode="" Description="This is the IP and Port for your running Crowdsec instance.&#13;&#10;ex: http://IP:PORT" Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="UNIFI_HOST" Target="UNIFI_HOST" Default="" Mode="" Description="This is the IP of your running UniFi Instance.&#13;&#10;ex: https://IP" Type="Variable" Display="always" Required="false" Mask="false"></Config>
@@ -28,5 +15,4 @@
   <Config Name="UNIFI_SKIP_TLS_VERIFY" Target="UNIFI_SKIP_TLS_VERIFY" Default="" Mode="" Description="Set this to true if you do not have a valid certificate on your UniFi Console/Controller." Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="UNIFI_ZONE_SRC" Target="UNIFI_ZONE_SRC" Default="External" Mode="" Description="Optional: Unless you have created additional zones in your firewall you can leave this blank, otherwise, External is recommended." Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="UNIFI_ZONE_DST" Target="UNIFI_ZONE_DST" Default="External Internal Vpn Hotspot" Mode="" Description="Optional: Unless you have created additional zones in your firewall you can leave this blank, otherwise, add each zone - separated by a space - that you'd like Crowdsec to add to the blocklist." Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <TailscaleStateDir/>
 </Container>
