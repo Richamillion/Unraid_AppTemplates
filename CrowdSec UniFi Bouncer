@@ -6,13 +6,13 @@
   <Network>Bridge</Network>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Project>https://github.com/teifun2/cs-unifi-bouncer<Project/>
+  <Project>https://github.com/teifun2/cs-unifi-bouncer</Project>
   <Icon>https://github.com/teifun2/cs-unifi-bouncer/raw/main/docs/assets/crowdsec_unifi_logo.png</Icon>
-  <Config Name="CROWDSEC_BOUNCER_API_KEY" Target="CROWDSEC_BOUNCER_API_KEY" Default="" Mode="" Description="Run " Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="CROWDSEC_URL" Target="CROWDSEC_URL" Default="" Mode="" Description="This is the IP and Port for your running Crowdsec instance.&#13;&#10;ex: http://IP:PORT" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="UNIFI_HOST" Target="UNIFI_HOST" Default="" Mode="" Description="This is the IP of your running UniFi Instance.&#13;&#10;ex: https://IP" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="UNIFI_API_KEY" Target="UNIFI_API_KEY" Default="" Mode="" Description="In your UniFi Network Console/Controller go to Settings &amp;gt; Admins &amp;amp; Users and select your primary account. Select Create New, enter a name and expiration, then click Create. Copy the key here." Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="UNIFI_SKIP_TLS_VERIFY" Target="UNIFI_SKIP_TLS_VERIFY" Default="" Mode="" Description="Set this to true if you do not have a valid certificate on your UniFi Console/Controller." Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="CROWDSEC_BOUNCER_API_KEY" Target="CROWDSEC_BOUNCER_API_KEY" Default="" Mode="" Description="Run 'cscli bouncers add unifi' in the console of your CrowdSec instance to generate an API key. Copy and paste the key here." Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="CROWDSEC_URL" Target="CROWDSEC_URL" Default="http://CROWDSEC:PORT" Mode="crowdsec" Description="This is the IP and Port for your running Crowdsec instance." Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="UNIFI_HOST" Target="UNIFI_HOST" Default="https://UNIFI" Mode="" Description="This is the IP of your running UniFi Instance." Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="UNIFI_API_KEY" Target="UNIFI_API_KEY" Default="" Mode="" Description="Generate an API key in your UniFi Network Console under Settings > Admins and Users. Copy and paste the key here." Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="UNIFI_SKIP_TLS_VERIFY" Target="UNIFI_SKIP_TLS_VERIFY" Default="false" Mode="" Description="Set this to true if you do not have a valid certificate on your UniFi Console/Controller." Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="UNIFI_ZONE_SRC" Target="UNIFI_ZONE_SRC" Default="External" Mode="" Description="Optional: Unless you have created additional zones in your firewall you can leave this blank, otherwise, External is recommended." Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="UNIFI_ZONE_DST" Target="UNIFI_ZONE_DST" Default="External Internal Vpn Hotspot" Mode="" Description="Optional: Unless you have created additional zones in your firewall you can leave this blank, otherwise, add each zone - separated by a space - that you'd like Crowdsec to add to the blocklist." Type="Variable" Display="always" Required="false" Mask="false"></Config>
 </Container>
